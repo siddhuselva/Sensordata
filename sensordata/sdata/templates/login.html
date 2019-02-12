@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {%load static%} <!-- loading static files -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title>Lab Login</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{%static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{%static 'css/floating-labels.css' %}" rel="stylesheet">
+  </head>
+
+  <body background="{%static 'Bg-01.jpg' %}">
+    <form class="form-signin" method="POST"> {% csrf_token %}
+      <div class="text-center mb-4">
+        <img class="mb-4" src="{%static 'pycharm.ico'%}" alt="" width="72" height="72">
+        <h1 class="h3 mb-3 font-weight-normal" color="#f7f3f2">LOGIN</h1>
+        <!--<p> <code>:placeholder-shown</code> pseudo-element <a href="https://caniuse.com/#feat=css-placeholder-shown">Works in latest Chrome, Safari, and Firefox.</a></p>-->
+      </div>
+
+      <div class="form-label-group">
+        <input type="text" id="inputusername" class="form-control" placeholder="Username" name ="uname2" required autofocus>
+        <label for="inputPassword">User Name</label>
+      </div>
+
+      <!--<div class="form-label-group">-->
+        <!--<input type="email" id="inputEmail" class="form-control" placeholder="Email address"  name= "email1" required autofocus>-->
+        <!--<label for="inputEmail">Email address</label>-->
+      <!--</div>-->
+
+      <div class="form-label-group">
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" name ="upswd2" required autofocus>
+        <label for="inputPassword">Password</label>
+      </div>
+
+
+
+      <div class="checkbox mb-3">
+        <label>
+          <input type="checkbox" value="remember-me" color="#f7f3f2"> Remember me
+        </label>
+        <a href="/signup">signup</a>
+      </div>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      <p class="mt-5 mb-3 text-muted text-center">&copy; 2017-2018</p>
+    </form>
+</body>
+</html>
